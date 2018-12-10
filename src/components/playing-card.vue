@@ -27,44 +27,6 @@
         </div>
     </div>
 </template>
-<style lang="scss">
-.playing-card {
-  display: inline-block;
-  width: 70px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 5px;
-  box-shadow: 4px 4px 5px darkgray;
-  background-color: #fcfcfc;
-  border-color: #636363;
-  cursor: pointer;
-
-  .bottom {
-    text-align: right;
-    position: relative;
-    bottom: 0px;
-  }
-  .center {
-    text-align: center;
-    line-height: 30px;
-    font-size: 22px;
-  }
-
-    .red-suit {
-    color: red;
-    }
-    .black-suit {
-    color: black;
-    }
-    .back {
-    background-color: #fcfcfc;
-    border-color: #44607c;
-    }
-}
-
-</style>
 <script>
 export default {
     props : {
@@ -135,3 +97,41 @@ export default {
     },
 };
 </script>
+<style lang="scss">
+.playing-card {
+  display: inline-block;
+  width: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px darkgray;
+  background-color: #fcfcfc;
+  border-color: #636363;
+  cursor: pointer;
+
+  .bottom {
+    text-align: right;
+    position: relative;
+    bottom: 0px;
+  }
+  .center {
+    text-align: center;
+    line-height: 30px;
+    font-size: 22px;
+  }
+
+    .red-suit {
+    color: red;
+    }
+    .black-suit {
+    color: black;
+    }
+    .back {
+    background-color: #fcfcfc;
+    border-color: #44607c;
+    }
+}
+
+</style>

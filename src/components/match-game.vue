@@ -1,10 +1,12 @@
 <template>
     <div class="match-game">
-        <div v-for = "card in gameCards" class="card-div">
+        <div 
+            v-for = "card in gameCards" 
+            :key = "card.key"
+            class="card-div"
+        >
             <component 
-                
                 :is = "cardComponent" 
-                :key = "card.key"
                 :card-data = "card"
                 :class = "card.done ? 'done' : ''"
                 @event_card_click = "handleCardClick"
@@ -16,9 +18,6 @@
 <script>
 
 export default {
-    components : {
-
-    },
     props : {
         gameCards : {
             type : "array",
@@ -60,8 +59,8 @@ export default {
                 setTimeout(function() {
                     if (!match) {
                         self.cardsBackOver();
+                        this.$emit("event_match");
                     } else {
-                        //alert("match");
                         self.handleMatch();
                     }
                 },1000);
@@ -141,7 +140,6 @@ export default {
 </script>
 <style lang="scss">
     .match-game {
-
         .alert.alert-info {
             padding-top: 0px;
             padding-bottom: 0px;

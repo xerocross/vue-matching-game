@@ -1,13 +1,13 @@
 import Vue from "vue";
-import {CrossMatchingGame} from "./index.js"
+import {VueMatchingGame} from "./index.js"
 
 
 new Vue({
     el : "#widget",
     components : {
-        CrossMatchingGame
+        VueMatchingGame
     },
     render : function (createElement) {
-        return createElement(CrossMatchingGame);
+        return createElement(VueMatchingGame);
     }
 });
